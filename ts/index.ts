@@ -1,4 +1,3 @@
-import { trim } from 'jquery'
 import jquery=require('jquery')
 
 let c = 0
