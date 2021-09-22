@@ -68,7 +68,7 @@ function checkbox(name, msg, id, bo) {
     if ($(name + ":checkbox:checked").length > 0) {
         if (bo == true) {
             var valC = $("#otraT").val();
-            if (!$("#otraC").is(":checked") || ($("#otraC").is(":checked") && valC.length > 2)) {
+            if (!$("#otraC").is(":checked") || ($("#otraC").is(":checked") && valC.trim().length > 2)) {
                 $(id + " :input").removeClass("border-danger");
                 $(id + " :input").addClass("border-success");
                 if (msg.is(":visible")) {
@@ -99,11 +99,8 @@ function formV() {
     var ta = document.querySelector('textarea');
     var nv = document.querySelector('input[name=inlineRadioOptions]');
     form.forEach(function (e) {
-        if (e.classList.contains("nv")) {
-            console.log(e);
-            if (!e.checkValidity()) {
-                tcheck = false;
-            }
+        if (e.classList.contains("nv") && !e.checkValidity()) {
+            tcheck = false;
         }
     });
     if (!nv.checkValidity()) {

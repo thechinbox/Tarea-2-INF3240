@@ -41,7 +41,7 @@
             <form id="formulario" class="row g-5" novalidate>
                 <div class="col-8  mx-auto mb-2 centrado needs-validation" >
                     <label for="nombre" class="form-label">Nombre Completo</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Ej: Juan Ignacio Perez Perez" required >
+                    <input type="text" class="form-control nv" id="nombre" placeholder="Ej: Juan Ignacio Perez Perez" required >
                     <div class="invalid-feedback">
                         Rellene este campo antes de continuar
                     </div>
@@ -57,7 +57,7 @@
 
                 <div class="col-8  mx-auto my-2 centrado needs-validation">
                     <label for="mail" class="col-form-label">Correo Electrónico</label>
-                    <input type="email" id="mail" class="form-control" placeholder="Ej: ejemplo@correo.cl" required>
+                    <input type="email" id="mail" class="form-control nv" placeholder="Ej: ejemplo@correo.cl" required>
                     <div class="invalid-feedback">
                         Rellene este campo antes de continuar
                     </div>
@@ -133,7 +133,7 @@
                         <label for="nivel" class="col-form-label">Experiencia en Programación</label>
                 </div>
                 <div class="col-8 m-auto centrado needs-validation">  
-                    <div id="nivel" class="form-check-inline">
+                    <div id="nivel" class="form-check-inline ">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="al" value="Alto" required>
                         <label class="form-check-label" for="al">Alto</label>
 
@@ -145,21 +145,21 @@
                     </div>
                 </div>
                 <div class="col-8 mx-auto my-4 centrado"  >
-                    <label> Nivel de conocimiento en los Lenguajes de Programación (Valor por Defecto en 0) </label>
+                    <label> Nivel de conocimiento en los Lenguajes de Programación (Por Defecto valor igual 0) </label>
                 </div>
 
                 <div class="col-8 m-auto centrado  ">
-                    <label for="pyr" class="form-label w-100">Python</label>
+                    <label for="pyr" class="form-label w-100 nv">Python</label>
                     <input type="range" value="0" min= 0 max= 10 step="1" class="form-range nv w-75" id="pyr" required>
                 </div>
 
                 <div class="col-8 m-auto centrado">
-                    <label for="jvr" class="form-label w-100">Java</label>
+                    <label for="jvr" class="form-label w-100 nv">Java</label>
                     <input type="range" value="0" min= 0 max= 10 step="1" class="form-range nv w-75" id="jvr" required>
                 </div>
 
                 <div class="col-8 m-auto centrado ">
-                    <label for="cppr" class="form-label w-100">C++</label>
+                    <label for="cppr" class="form-label w-100 nv">C++</label>
                     <input type="range" value="0" min= 0 max= 10 step="1" class="form-range nv w-75" id="cppr" required>
                 </div>
 

@@ -1,3 +1,4 @@
+import { trim } from 'jquery'
 import jquery=require('jquery')
 
 let c = 0
@@ -79,7 +80,7 @@ function checkbox(name:any,msg:any, id:any, bo:any){
   if($(name + ":checkbox:checked").length > 0){
     if (bo == true){
       let valC:any= $("#otraT").val()
-      if(!$("#otraC").is(":checked") || ($("#otraC").is(":checked") &&  valC.length > 2) ){
+      if(!$("#otraC").is(":checked") || ($("#otraC").is(":checked") &&  valC.trim().length > 2)){
         $(id + " :input").removeClass("border-danger")
         $(id + " :input").addClass("border-success")
         if(msg.is(":visible")){msg.hide()}
@@ -105,12 +106,8 @@ function formV(){
   let ta:any = document.querySelector('textarea')  
   let nv:any = document.querySelector('input[name=inlineRadioOptions]')  
   form.forEach(function(e){ 
-      if( e.classList.contains("nv")){
-        console.log(e);
-        
-        if(!e.checkValidity()){
-          tcheck = false
-        }
+      if( e.classList.contains("nv") && !e.checkValidity()){
+        tcheck = false
       } 
     }
   )
@@ -124,7 +121,7 @@ function formV(){
 }
 
 $('#enviar').on('click',function(e:any){
-  c = 1 
+  c = 1
   let rc = rutCheck()
   let telc = telV()
   let cb1c = checkbox("input[name='lps']",$("#lpsval"),"#lp", false)
